@@ -106,21 +106,7 @@ public class LangUtil {
                     "6. サーバーを起動します。\n" +
                     "\n" +
                     "\n");
-           put(Language.KO,
-                    "\n" +
-                    "\n" +
-                    "DiscordSRV를 ASM 4에서 구동 중 입니다.. DiscordSRV는 ASM 5 이상 버전에서 작동합니다.\n" +
-                    "DiscordSRV는 ASM 5없이는 작동 할 수 없습니다. 구식 라이브러리를 써서 만든 서버 소프트웨어 개발자 한테 따지세요.\n" +
-                    "\n" +
-                    "ASM 5로 업데이트 하는 방법:\n" +
-                    "1. 서버의 {specialsourcefolder} 폴더로 들어갑니다.\n" +
-                    "2. SpecialSource-1.7-SNAPSHOT.jar 파일을 삭제 합니다.\n" +
-                    "3. SpecialSource v1.7.4를 http://central.maven.org/maven2/net/md-5/SpecialSource/1.7.4/SpecialSource-1.7.4.jar 에서 다운로드 받습니다.\n" +
-                    "4. {specialsourcefolder}로 3에서 다운로드 받은 파일을 복사합니다.\n" +
-                    "5. 4에서 복사한 파일의 이름을 SpecialSource-1.7-SNAPSHOT.jar로 바꿉니다.\n" +
-                    "6. 서버를 재부팅 합니다.\n" +
-                    "\n" +
-                    "\n");
+           put(Language.KO, "");
             put(Language.NL,
                     "\n" +
                     "\n" +
@@ -227,10 +213,7 @@ public class LangUtil {
                              "           サーバーホストが必要ですか。 PebbleHostを試してください。 1ドル/ GBからの計画\n" +
                              " あなたの最初の3つの手形から15％のチェックアウトでプロモーションコード「DISCORDSRV」を使ってください！\n" +
                              "===========================================================================================");
-            put(Language.KO, "=====================================================================================\n" +
-                             "   서버 호스트가 필요합니까? PebbleHost를 사용해보십시오! $ 1 / GB부터 시작하는 예산 계획!\n" +
-                             "  체크 아웃시 프로모션 코드 \"DISCORDSRV\"를 사용하여 첫 3 건의 청구서를 15 % 할인하십시오!\n" +
-                             "=====================================================================================");
+            put(Language.KO, "");
             put(Language.NL, "===================================================================\n" +
                              " Een serverhost nodig? Probeer PebbleHost! Plannen vanaf $ 1 / GB!\n" +
                              "    Gebruik promocode \"DISCORDSRV\" bij het afrekenen voor 15%\n" +
@@ -259,7 +242,7 @@ public class LangUtil {
             put(Language.FR, "Serveur trouvé");
             put(Language.DE, "Server wurde gefunden");
             put(Language.JA, "見つかったサーバー");
-            put(Language.KO, "서버를 찾았습니다");
+            put(Language.KO, "서버 검색됨");
             put(Language.NL, "Server gevonden");
             put(Language.ES, "Servidor encontrado");
             put(Language.RU, "Сервер найден");
@@ -501,7 +484,7 @@ public class LangUtil {
             put(Language.FR, "Tchat");
             put(Language.DE, "Chat");
             put(Language.JA, "チャット");
-            put(Language.KO, "챗");
+            put(Language.KO, "채팅");
             put(Language.NL, "Chat");
             put(Language.ES, "Chat");
             put(Language.RU, "Чат");
@@ -622,7 +605,7 @@ public class LangUtil {
             put(Language.FR, "Impossible de trouver le rôle {rolename} lors de la synchronisation des groupes.Le bot est il sur le serveur ?");
             put(Language.DE, "Konnte keine Rolle mit id {rolename} für gruppensynchronisierung finden. Ist der Bot auf dem Server?");
             put(Language.JA, "グループを同期させるために、ID「{rolename}」のロールを見つけることができませんでした。 Botはサーバ上にありますか？");
-            put(Language.KO, "그룹 동기화를 할 Role ID를 찾을 수 없습니다. 봇이 디스코드 서버에 있나요?");
+            put(Language.KO, "그룹 동기화를 할 Role ID를 찾을 수 없습니다.");
             put(Language.NL, "Kon role id {rolename} niet vinden dit word gebruikt voor groep synchronisatie. Is de bot in de server?");
             put(Language.ES, "No se pudo encontrar el rol {rolename} para usar con sincronización de grupo. ¿Está el bot en el servidor?");
             put(Language.RU, "Не могу найти подходящий ID роли {rolename}, чтобы произвести синхронизацию. Бот точно уже подключился к серверу?");
@@ -633,7 +616,7 @@ public class LangUtil {
             put(Language.FR, "Je ne connais pas un tel code, réessayez");
             put(Language.DE, "Diesen Code kenne ich nicht, bitte versuche es erneut.");
             put(Language.JA, "そのようなコードは知りません。もう一度やり直してください。");
-            put(Language.KO, "그런 코드는 발급한 적 없습니다, 다시 시도 해 주세요.");
+            put(Language.KO, "유효하지 않은 코드입니다.");
             put(Language.NL, "Ik ken die code niet, probeer opnieuw.");
             put(Language.ES, "No conozco ese código, inténtelo de nuevo.");
             put(Language.RU, "Я не знаю такого кода, попробуйте снова.");
@@ -644,7 +627,7 @@ public class LangUtil {
             put(Language.FR, "Êtes vous sûr qu'il s'agit du bon code ? Les codes possèdent quatre chiffres.");
             put(Language.DE, "Bist du sicher, dass dies dein Code ist? Link-Codes bestehen aus 4 Zahlen.");
             put(Language.JA, "それがあなたのコードで正しいですか？リンクコードは4文字の数字です。");
-            put(Language.KO, "코드가 올바르지 않습니다. 코드는 4자리 숫자로 구성 되어 있습니다.");
+            put(Language.KO, "유효하지 않은 코드입니다. 코드는 4자리 숫자로 구성 되어 있습니다.");
             put(Language.NL, "Weet je zeker dat dat je code is? De codes zijn 4 cijferss lang.");
             put(Language.ES, "¿Estás seguro de que ese es tu código? Los códigos de enlace tienen 4 números de largo");
             put(Language.RU, "Вы уверены, что это ваш код? Обычно код выглядит как 4 цифры.");
@@ -655,7 +638,7 @@ public class LangUtil {
             put(Language.FR, "Vous êtes déjà lié à {username} ({uuid})");
             put(Language.DE, "Sie sind bereits mit {username} ({uuid}) verknüpft");
             put(Language.JA, "あなたは既に {username} にリンクされています ({uuid})");
-            put(Language.KO, "이미 {username} ({uuid}) 에 링크되어 있습니다");
+            put(Language.KO, "이미 {username} ({uuid}) 에 연동되어 있습니다");
             put(Language.NL, "U bent al gelinkt aan {username} ({uuid})");
             put(Language.ES, "Ya estás vinculado a {username} ({uuid})");
             put(Language.RU, "Вы уже связаны с {username} ({uuid})");
@@ -699,7 +682,7 @@ public class LangUtil {
             put(Language.FR, "Seuls les joueurs peuvent effectuer cette commande.");
             put(Language.DE, "Nur Spieler können diesen Befehl ausführen.");
             put(Language.JA, "ゲーム内プレイヤーのみがこのコマンドを実行することができます。");
-            put(Language.KO, "플레이어만 이 명령어를 실행 할 수 있습이다.");
+            put(Language.KO, "플레이어만 이 명령어를 실행 할 수 있습니다.");
             put(Language.NL, "Alleen spelers kunnen dit command gebruiken.");
             put(Language.ES, "Solo los jugadores pueden ejecutar este comando");
             put(Language.RU, "Только игроки могут выполнить такую команду.");
@@ -710,7 +693,7 @@ public class LangUtil {
             put(Language.FR, "Cette commande n'existe pas !");
             put(Language.DE, "Dieser Befehl existiert nicht!");
             put(Language.JA, "指定されたコマンドは存在しません！");
-            put(Language.KO, "그런 명령어는 없습니다!");
+            put(Language.KO, "그런 명령어는 없습니다.");
             put(Language.NL, "Dat command bestaat niet!");
             put(Language.ES, "Este comando no existe");
             put(Language.RU, "Такой команды не существует!");
@@ -732,7 +715,7 @@ public class LangUtil {
             put(Language.FR, "Votre compte Minecraft n'est plus associé à {name}.");
             put(Language.DE, "Dein Minecraft-Account ist nicht länger verbunden mit {name}.");
             put(Language.JA, "あなたのMinecraftアカウントは、{name}とのリンクが解除されました。");
-            put(Language.KO, "당신의 마인크래프트 계정은 더 이상 {name}과 연동되어있지 않습니다.");
+            put(Language.KO, ChatColor.translateAlternateColorCodes('&',"&6[ &a&lSABU REALM &6] 성공적으로 &e&l{name} &6계정과의 연동을 해제했습니다."));
             put(Language.NL, "Je Minecraft account is niet langer gekoppeld met {name}");
             put(Language.ES, "Tu cuenta de Minecraft ya no está asociada con {name}");
             put(Language.RU, "Ваш Майнкрафт аккаунт больше не связан с {name}.");
@@ -743,7 +726,7 @@ public class LangUtil {
             put(Language.FR, "Votre compte Minecraft n'est pas associé à un compte Discord.");
             put(Language.DE, "Dein Minecraft-Account ist mit keinem Discord-Account verbunden.");
             put(Language.JA, "あなたのMinecraftアカウントはDiscordアカウントにリンクされていません。");
-            put(Language.KO, "당신의 마인크래프트 계정은 디스코드 계정과 연동되어있지 않습니다.");
+            put(Language.KO, ChatColor.translateAlternateColorCodes('&',"&6[ &a&lSABU REALM &6] &c마인크래프트 계정이 디스코드 계정과 연동되어 있지 않습니다."));
             put(Language.NL, "Je Minecraft account is niet gekoppeld met een Discord account.");
             put(Language.ES, "Tu cuenta de Minecraft no está asociada con una cuenta de Discord");
             put(Language.RU, "Ваш Майнкрафт аккаунт не привязан к аккаунту Discord.");
@@ -754,7 +737,7 @@ public class LangUtil {
             put(Language.FR, "Votre compte Minecraft est associé à {name}.");
             put(Language.DE, "Dein Minecraft-Account ist verbunden mit {name}.");
             put(Language.JA, "あなたのMinecraftアカウントは{name}にリンクされました。");
-            put(Language.KO, "당신의 마인크래프트 계정은 디스코드 계정 {name}과 연동되어 있습니다.");
+            put(Language.KO, ChatColor.translateAlternateColorCodes('&',"&6[ &a&lSABU REALM &6] &c이미 계정이 디스코드 계정({name})과 연동되어 있습니다."));
             put(Language.NL, "Je Minecraft is gekoppeld met {name}");
             put(Language.ES, "Tu cuenta de Minecraft está asociada con {name}");
             put(Language.RU, "Ваш Майнкрафт аккаунт успешно связан с {name}.");
@@ -776,7 +759,7 @@ public class LangUtil {
             put(Language.FR, "Le message suivant n'a pas pu être envoyé sur le jeu car votre compte Minecraft doit être lié à votre compte Discord. Liez votre compte depuis Minecraft en tapant `/discord link`.\n```{message}```");
             put(Language.DE, "Du hast versucht die folgende Nachricht im Spielchat zu senden aber dieser Server verlangt, dass du deinen Minecraft-Account mit deinem Discord-Account verbinden musst. Verbinde sie, indem du im Spiel den Befehl `/discord link` eingibst.\n```{message}```");
             put(Language.JA, "ゲームチャットに以下のメッセージを表示しようとしましたが、このサーバーではあなたのMinecraftアカウントをDiscordアカウントにリンクさせる必要があります。リンクさせるには、ゲーム内で `/discord link` を実行してください。\n```{message}```");
-            put(Language.KO, "이 서버는 게임채팅에 말하려면 당신의 마인크래프트 계정을 디스코드에 연동해야 합니다.1\n 연동 방법 : `/discord link`.\n\n```{message}```");
+            put(Language.KO, "디스코드 연동 채팅 기능을 이용하려면 먼저 마인크래프트 계정과 디스코드 계정을 연동하십시오. \n 연동 명령어 : `/discord link`");
             put(Language.NL, "Je hebt geprobeerd het volgende bericht te versturen maar je hebt je Minecraft account niet gekoppeld met je Discord account. koppel het door `/discord link` te typen.\n```{message}```");
             put(Language.ES, "Intentaste decir el siguiente mensaje en el chat del juego, pero este servidor requiere que tenga su cuenta de Minecraft vinculada a su cuenta de Discord. Vincúlelo en el juego ejecutando `/discord link`.\n```{message}```");
             put(Language.RU, "Вы попытались отправить сообщение в игровой чат из клиента Discord, однако сервер требует, чтобы вы привязали ваш Майнкрафт аккаунт к вашей учётной записи Discord. Чтобы связать эти аккаунты, используйте команду `/discord link` в игре.\n```{message}```");
@@ -787,7 +770,7 @@ public class LangUtil {
             put(Language.FR, "Votre compte Minecraft est déjà associé à un compte Discord. Si vous avez la permission vous pouvez utiliser la commande /discord unlink pour retirer votre compte Discord.");
             put(Language.DE, "Ihr Minecraft-Konto ist bereits mit einem Discord-Konto verknüpft. Sollten Sie die Erlaubnis haben, können Sie Ihre Konto-Verknüpfung mit /discord unlink aufheben.");
             put(Language.JA, "あなたのMinecraftアカウントはすでにDiscordアカウントに関連付けられています。 もしあなたがパーミッションを持っていれば、/discord unlinkを実行して2つのリンクを解除することができます。");
-            put(Language.KO, "당신의 마인크래프트 계정은 디스코드 계정과 이미 연동되어 있습니다.");
+            put(Language.KO, ChatColor.translateAlternateColorCodes('&',"&6[ &a&lSABU REALM &6] &c이미 계정이 디스코드 계정과 연동되어 있습니다."));
             put(Language.NL, "Je Minecraft account is al gekoppeld met een Discord account. Als je toestemming hebt kan je je account ontkoppelen met /discord unlink.");
             put(Language.ES, "Su cuenta de Minecraft ya está asociada a una cuenta Discord. Si tiene permiso, puede desvincular su cuenta con /discord unlink.");
             put(Language.RU, "Ваш Майнкрафт аккаунт уже связан с учётной записью Discord. Вы можете отвязать его командой /discord unlink, если у вас есть соответсвующие права.");
