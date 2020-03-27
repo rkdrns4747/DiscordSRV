@@ -787,6 +787,28 @@ public class LangUtil {
             put(Language.RU, "Ни один игрок не указан. Это может быть UUID, имя игрока или Discord ID.");
             put(Language.ET, "Ühtegi mängijat pole täpsustatud. See võib olla mängija UUID, mängija nimi või Discord ID.");
             put(Language.ZH, "沒有玩家指定。這可能是玩家的UUID，玩家名稱或Discord ID。");
+        }}), PLAYER_IS_MUTED(new HashMap<Language, String>() {{
+            put(Language.EN, "No player specified. It can be a player UUID, player name, or Discord ID.");
+            put(Language.FR, "Aucune cible spécifiée. Peut être un UUID, un ID Discord ou un nom de joueur.");
+            put(Language.DE, "Kein Spieler angegeben. Dies kann eine UUID, ein Spielername oder eine Discord-ID sein.");
+            put(Language.JA, "プレーヤーが指定されていません。これは、UUID、プレーヤー名、またはDiscord IDです。");
+            put(Language.KO, "현재 서버 내에서 뮤트된 상태입니다. 디스코드 내 채팅을 이용할 수 없습니다.");
+            put(Language.NL, "U moet opgeven wie u wilt ontkoppelen. Het kan een UUID, een Discord-ID of een spelersnaam zijn.");
+            put(Language.ES, "Ningún objetivo especificado. Puede ser un UUID, una ID de Discord o un nombre de jugador.");
+            put(Language.RU, "Ни один игрок не указан. Это может быть UUID, имя игрока или Discord ID.");
+            put(Language.ET, "Ühtegi mängijat pole täpsustatud. See võib olla mängija UUID, mängija nimi või Discord ID.");
+            put(Language.ZH, "沒有玩家指定。這可能是玩家的UUID，玩家名稱或Discord ID。");
+        }}), PLAYER_IS_BANNED(new HashMap<Language, String>() {{
+            put(Language.EN, "No player specified. It can be a player UUID, player name, or Discord ID.");
+            put(Language.FR, "Aucune cible spécifiée. Peut être un UUID, un ID Discord ou un nom de joueur.");
+            put(Language.DE, "Kein Spieler angegeben. Dies kann eine UUID, ein Spielername oder eine Discord-ID sein.");
+            put(Language.JA, "プレーヤーが指定されていません。これは、UUID、プレーヤー名、またはDiscord IDです。");
+            put(Language.KO, "현재 서버에서 밴 처리된 상태입니다. 디스코드 내 채팅을 이용할 수 없습니다.");
+            put(Language.NL, "U moet opgeven wie u wilt ontkoppelen. Het kan een UUID, een Discord-ID of een spelersnaam zijn.");
+            put(Language.ES, "Ningún objetivo especificado. Puede ser un UUID, una ID de Discord o un nombre de jugador.");
+            put(Language.RU, "Ни один игрок не указан. Это может быть UUID, имя игрока или Discord ID.");
+            put(Language.ET, "Ühtegi mängijat pole täpsustatud. See võib olla mängija UUID, mängija nimi või Discord ID.");
+            put(Language.ZH, "沒有玩家指定。這可能是玩家的UUID，玩家名稱或Discord ID。");
         }});
 
         @Getter private final Map<Language, String> definitions;

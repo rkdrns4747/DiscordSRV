@@ -18,6 +18,8 @@
 
 package github.scarsz.discordsrv.listeners;
 
+import com.earth2me.essentials.Essentials;
+import com.earth2me.essentials.User;
 import github.scarsz.discordsrv.DiscordSRV;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -27,8 +29,20 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerChatListener implements Listener {
 
+    private boolean muteStatus = false;
+
     @EventHandler(priority = EventPriority.MONITOR)
     public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
+        Essentials ess = (Essentials) Bukkit.getPluginManager().getPlugin("Essentials");
+        if(ess != null){
+            User user = ess.getUser(event.getPlayer().getUniqueId().toString());
+            if(user != null){
+                muteStatus = user.isMuted();
+            }
+        }
+        if(muteStatus)
+            return;
+
         Bukkit.getScheduler().runTaskAsynchronously(DiscordSRV.getPlugin(), () ->
                 DiscordSRV.getPlugin().processChatMessage(event.getPlayer(), event.getMessage(), DiscordSRV.getPlugin().getChannels().size() == 1 ? null : "global", event.isCancelled())
         );

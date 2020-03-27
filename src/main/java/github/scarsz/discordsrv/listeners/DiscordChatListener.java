@@ -18,6 +18,7 @@
 
 package github.scarsz.discordsrv.listeners;
 
+import com.earth2me.essentials.Essentials;
 import com.vdurmont.emoji.EmojiParser;
 import github.scarsz.discordsrv.DiscordSRV;
 import github.scarsz.discordsrv.api.events.DiscordGuildMessagePostProcessEvent;
@@ -36,6 +37,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 
@@ -90,6 +93,53 @@ public class DiscordChatListener extends ListenerAdapter {
                 DiscordUtil.deleteMessage(event.getMessage());
                 return;
             }
+        }
+
+        // block if the player is muted
+        boolean hasLinkedAccount = DiscordSRV.getPlugin().getAccountLinkManager().getUuid(event.getAuthor().getId()) != null;
+        boolean isMuted = false;
+        String name = "";
+        if(hasLinkedAccount && !event.getAuthor().isBot()) {
+            UUID playerUUID = DiscordSRV.getPlugin().getAccountLinkManager().getUuid(event.getAuthor().getId());
+            Essentials ess = (Essentials) Bukkit.getPluginManager().getPlugin("Essentials");
+            OfflinePlayer op = Bukkit.getOfflinePlayer(playerUUID);
+
+            if(ess != null){
+                if(op.isOnline()) {
+                    isMuted = ess.getUser(playerUUID).isMuted();
+                }else {
+                    name = op.getName();
+                    isMuted = ess.getOfflineUser(name).isMuted();
+                }
+            }
+
+            if(isMuted){
+                event.getAuthor().openPrivateChannel().queue(privateChannel -> privateChannel.sendMessage(LangUtil.InternalMessage.PLAYER_IS_MUTED.toString()
+                        .replace("{message}", event.getMessage().getContentRaw())
+                ).queue());
+                DiscordUtil.deleteMessage(event.getMessage());
+                return;
+            }
+        }
+
+        // block if the player is banned
+        boolean isBanned = false;
+        if(hasLinkedAccount && !event.getAuthor().isBot()) {
+            UUID playerUUID = DiscordSRV.getPlugin().getAccountLinkManager().getUuid(event.getAuthor().getId());
+            OfflinePlayer op = Bukkit.getOfflinePlayer(playerUUID);
+            isBanned = op.isBanned();
+
+            if(isBanned){
+                event.getAuthor().openPrivateChannel().queue(privateChannel -> privateChannel.sendMessage(LangUtil.InternalMessage.PLAYER_IS_BANNED.toString()
+                        .replace("{message}", event.getMessage().getContentRaw())
+                ).queue());
+                DiscordUtil.deleteMessage(event.getMessage());
+                return;
+            }
+        }
+        //remove emoji if message contains emoji
+        if(event.getMessage() != null){
+            message = event.getMessage().getContentRaw().replaceAll(":[A-Za-z0-9_]+:", "");
         }
 
         // block bots
